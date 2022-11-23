@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+AngularJs Select Box or Dropdown List example
+</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="">
+<div>
+<h3>AngularJS Select Box or Dropdown List Example</h3>
+<select #team (change) = "place(team.value)">
+<option value="">--Select--</option>
+<option value="1">Paris</option>
+<option value="2">New York</option>
+<option value="3">Norway</option>
+<option value="4">Canada</option>
+<option value="5">London</option>
+</select>
+</div>
+<br><br>
+<img [src]="imagePath" width="300" height="300"/>
+</body>
+</html>
+
