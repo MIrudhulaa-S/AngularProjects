@@ -1,0 +1,20 @@
+<p>login-page works!</p>
+<form action="/home-page" style="border:1px solid rgb(154, 154, 154); border-width:5px;">
+    <div class="container"><br><br>
+        <label for="email"><b>Email : </b></label>
+        <input #pass type="text" placeholder="Enter Email" name="email" required>
+<br><br>
+        <label for="psw"><b>Password : </b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <br><br>
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" required> Remember me
+        </label>
+    <br><br>     
+        <div class="clearfix">
+            <button type="button" class="cancelbtn"> Cancel </button>
+            <button type="submit" class="signupbtn" (click) = "func(pass.value)">
+            <a [routerLink]="[ '.', 'login_page/patient_details' ]"></a> LOGIN </a></button><br><br>
+        </div>
+    </div>
+</form>
