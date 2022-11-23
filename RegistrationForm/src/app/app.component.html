@@ -1,0 +1,60 @@
+<h1 style = "text-align:center">Registration Form</h1>
+
+<div style = "text-align:center">
+  <form action = "/submit-form">
+    <div class="container">
+
+      <label for = "name">Name : </label>
+      <input #bt type = "text" placeholder = "Enter name" name = "name" (onkeyup) = "manage(bt.value)" required />
+<br><br>
+      <label for = "dob">D.O.B : </label>
+      <input type = "date" placeholder = "Enter date of birth" name = "dob" required />
+<br><br>
+      <label for = "mob">Mobile Number : </label>
+      <input type = "tel" placeholder = "Enter mobile number" pattern = "[0-9](4} [0-9]{3} [0-9]{3}" name = "mob" required />
+<br><br>
+      <label for = "mail">E-mail : </label>
+      <input type = "email" placeholder = "Enter email" name = "mail" required />
+<br><br>
+      <label for = "college">College Name : </label>
+      <input type = "text" placeholder = "Enter college name" name = "college" required />
+<br><br>
+      <label for = "country">Country : </label>
+        <select #cou (change) = "place(cou.value)" required>
+          <option value="">Select</option>
+          <option value="1">India</option>
+          <option value="2">Japan</option>
+          <option value="3">France</option>     
+        </select>
+<br><br>   
+      <label for = "state">City : </label>
+        <select #cit (change) = "place(cit.value)" required>
+          <option value="">Select</option>
+          <option value="1">Paris</option>
+          <option value="2">La Rochelle</option>
+          <option value="3">Strasbourg</option> 
+          <option value="4">Chennai</option>
+          <option value="5">Mumbai</option>
+          <option value="6">Kochi</option> 
+          <option value="7">Delhi</option>
+          <option value="8">Kyushu-Okinawa</option>
+          <option value="9">Shikoku</option>
+          <option value="10">Tohoku</option>    
+        </select>
+<br><br>     
+      <label>
+        <input type="checkbox" name="remember" style="margin-bottom:15px" required> Accept Terms & Conditoins
+      </label>
+<br><br>
+<label>
+<input #sub type="submit" name="submit" style="margin-bottom:15px"/>
+</label>
+<br><br>
+<nav>
+  <a routerLink = '/submit-form/'>Submit</a>
+</nav>
+    </div>
+  </form>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+<p>Admin-login works!</p>
+
+<h1>LOGIN</h1>
+<form>
+    <form action="/home-page" style="border:1px solid #ccc">
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input #pass type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="id"><b>Admin Id</b></label>
+            <input #pass type="text" placeholder="Enter Admin ID" name="id" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" required> Remember me
+            </label>
+            
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn" (click) = "func(pass.value)">LOGIN</button>
+            </div>
+        </div>
+</form>
+
+<p>{{Admin | titlecase}}</p>
