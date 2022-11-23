@@ -1,0 +1,25 @@
+<h1 style = "text-align:center; font-family:arial">Currency Conversion using PIPES</h1>
+<div>
+  <select #curr1>
+    <option value='' >--Select--</option>
+    <option value="1">India</option>
+    <option value="2">USA</option>
+    <option value="3">Japan</option>
+  </select>
+<br><br>
+  <select #curr2>
+    <option value=  "">--Select--</option>
+    <option value="1">India</option>
+    <option value="2">USA</option>
+    <option value="3">Japan</option>
+  </select>
+</div>
+<br>
+
+<input #val type ="text"/>
+<br><br>
+
+<button (click) = "calc(curr1.value, curr2.value, val.value)"> CALCULATE</button>
+<br><br>
+
+<h3 style = "font-family:arial">RESULT : {{ result | currency : cur : 'symbol' : '.2-2'}}</h3>
