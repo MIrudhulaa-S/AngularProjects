@@ -1,0 +1,20 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        //before generic
+        List bl = new LinkedList();
+        bl.add(new Integer(1));
+        bl.add(new Integer(2));
+        bl.add(new Integer(3));
+        Integer x = (Integer)bl.iterator().next();
+        System.out.println(bl);
+        
+        //after generic
+        List<Integer> al = new LinkedList();
+        al.add(new Integer(10));
+        al.add(new Integer(20));
+        al.add(new Integer(30));
+        Integer y = al.iterator().next();
+        System.out.println(al);
+    }
+}
